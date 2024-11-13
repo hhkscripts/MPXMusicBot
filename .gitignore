@@ -1,0 +1,16 @@
+.env
+.MPX.env
+.cineMPX.env
+.dev.env
+.cache
+MPXlogs.txt
+.DS_Store
+*.session
+raw_files/
+cache/
+downloads/
+__pycache__/
+*.session-journal
+tempdb/
+.idea/
+.venv
