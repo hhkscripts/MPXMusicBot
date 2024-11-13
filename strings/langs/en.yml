@@ -249,9 +249,9 @@ misc_1: "🤖 Bot automatically cleared the queue and left the voice chat becaus
 # Inline Buttons
 
 # General Buttons
-CLOSE_BUTTON: "Close"
-CLOSEMENU_BUTTON: "Close"
-BACK_BUTTON: "🔙 Back"
+CLOSE_BUTTON: "Cʟᴏsᴇ"
+CLOSEMENU_BUTTON: "Cʟᴏsᴇ"
+BACK_BUTTON: "Bᴀᴄᴋ"
 UNBAN_BUTTON: "🆓 Unban assistant"
 
 # Lyrics
