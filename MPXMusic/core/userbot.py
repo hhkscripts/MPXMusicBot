@@ -39,8 +39,8 @@ class Userbot(Client):
             assistant_ids.append(get_me.id)
             client.name = f"{get_me.first_name} {get_me.last_name or ''}".strip()
 
-            await client.join_chat("@cineMPX")
-            await client.join_chat("@cineMPXcoments")
+            await client.join_chat("@mmprofessx")
+            await client.join_chat("@MPXDevGroup")
 
         except Exception as e:
             LOGGER(__name__).error(
