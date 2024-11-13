@@ -252,22 +252,22 @@ async def overall_stats(_client: Client, callback_query: CallbackQuery, _):
         ass = "Sim"
     else:
         ass = "Não"
-    text = f"""📊 **Estatísticas e informações do Bot:**
+    text = f"""📊 **Bᴏᴛ Sᴛᴀᴛɪsᴛɪᴄs ᴀɴᴅ Iɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
-🧩 **Módulos importados:** {mod}
-👥 **Chats atendidos:** {served_chats} 
-👤 **Usuários atendidos:** {served_users} 
-🚫 **Usuários bloqueados:** {blocked} 
-🔑 **Usuários Sudo:** {sudoers} 
+🧩 **Iᴍᴘᴏʀᴛᴇᴅ Mᴏᴅᴜʟᴇs:** {mod}
+👥 **Sᴇʀᴠᴇᴅ Cʜᴀᴛs:** {served_chats} 
+👤 **Sᴇʀᴠᴇᴅ Usᴇʀs:** {served_users} 
+🚫 **Bʟᴏᴄᴋᴇᴅ Usᴇʀs:** {blocked} 
+🔑 **Sᴜᴅᴏ Usᴇʀs:** {sudoers} 
 
-🔍 **Total de Consultas:** {total_queries} 
-🤖 **Total de Assistentes:** {assistant}
-💨 **Assistente de Saída Automática:** {ass}
+🔍 **Tᴏᴛᴀʟ Qᴜᴇʀɪᴇs:** {total_queries} 
+🤖 **Tᴏᴛᴀʟ Assɪsᴛᴀɴᴛs:** {assistant}
+💨 **Aᴜᴛᴏ Exɪᴛ Assɪsᴛᴀɴᴛ:** {ass}
 
-⏳ **Duração de Reprodução:** {play_duration} minutos
-🎵 **Download de Música:** {song} minutos
-📀 **Playlist no Servidor do Bot:** {playlist_limit}
-🎶 **Reprodução de Playlist:** {fetch_playlist}"""
+⏳ **Pʟᴀʏʙᴀᴄᴋ Dᴜʀᴀᴛɪᴏɴ:** {play_duration} ᴍɪɴᴜᴛᴇs
+🎵 **Mᴜsɪᴄ Dᴏᴡɴʟᴏᴀᴅ:** {song} ᴍɪɴᴜᴛᴇs
+📀 **Pʟᴀʏʟɪsᴛ ᴏɴ Bᴏᴛ Sᴇʀᴠᴇʀ:** {playlist_limit}
+🎶 **Pʟᴀʏʟɪsᴛ Pʟᴀʏʙᴀᴄᴋ:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await callback_query.edit_message_media(media=med, reply_markup=upl)
@@ -328,31 +328,31 @@ async def overall_stats(_client: Client, callback_query: CallbackQuery, _):
     total_queries = await get_queries()
     blocked = len(BANNED_USERS)
     sudoers = len(await get_sudoers())
-    text = f"""📊 **Estatísticas e informações do Bot:**
+    text = f"""📊 **Bᴏᴛ Sᴛᴀᴛɪsᴛɪᴄs ᴀɴᴅ Iɴғᴏʀᴍᴀᴛɪᴏɴ:**
 
-🧩 **Módulos importados:** {mod}
-💻 **Plataforma:** {sc}
-📊 **Memória RAM:** {ram}
-🖥️ **Cores físicas:** {p_core}
-🖥️ **Total de Cores:** {t_core}
-⚙️ **Frequência do CPU:** {cpu_freq}
+🧩 **Iᴍᴘᴏʀᴛᴇᴅ Mᴏᴅᴜʟᴇs:** {mod}
+💻 **Pʟᴀᴛғᴏʀᴍ:** {sc}
+📊 **RAM:** {ram}
+🖥️ **Pʜʏsɪᴄᴀʟ Cᴏʀᴇs:** {p_core}
+🖥️ **Tᴏᴛᴀʟ Cᴏʀᴇs:** {t_core}
+⚙️ **FCPU Fʀᴇǫᴜᴇɴᴄʏ:** {cpu_freq}
 
-🐍 **Versão do Python:** {pyver.split()[0]}
-📦 **Versão do Pyrogram:** {pyrover}
-🎧 **Versão do Py-tgcalls:** {pytgver}
-💾 **Armazenamento total:** {total[:4]} GiB
-💽 **Armazenamento usado:** {used[:4]} GiB
-📂 **Armazenamento livre:** {free[:4]} GiB
+🐍 **Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ:** {pyver.split()[0]}
+📦 **Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ:** {pyrover}
+🎧 **Pʏ-ᴛɢᴄᴀʟʟs Vᴇʀsɪᴏɴ:** {pytgver}
+💾 **Tᴏᴛᴀʟ Sᴛᴏʀᴀɢ:** {total[:4]} GɪB
+💽 **Usᴇᴅ Sᴛᴏʀᴀɢᴇ:** {used[:4]} GɪB
+📂 **Sᴛᴏʀᴀɢᴇ ғʀᴇᴇ:** {free[:4]} GɪB
 
-👥 **Chats atendidos:** {served_chats} 
-👤 **Usuários atendidos:** {served_users} 
-🚫 **Usuários bloqueados:** {blocked} 
-🔑 **Usuários Sudo:** {sudoers} 
+👥 **Sᴇʀᴠᴇᴅ Cʜᴀᴛs:** {served_chats} 
+👤 **Sᴇʀᴠᴇᴅ Usᴇʀs:** {served_users} 
+🚫 **Bʟᴏᴄᴋᴇᴅ Usᴇʀs:** {blocked} 
+🔑 **Sᴜᴅᴏ Usᴇʀs:** {sudoers} 
 
-🗄️ **Armazenamento total do BD:** {storage} MB
-🗃️ **Total de Coleções do BD:** {collections}
-🔑 **Total de Chaves do BD:** {objects}
-🔍 **Total de Consultas no Bot:** `{total_queries} `
+🗄️ **Tᴏᴛᴀʟ DB Sᴛᴏʀᴀɢᴇ:** {storage} MB
+🗃️ **Tᴏᴛᴀʟ DB Cᴏʟʟᴇᴄᴛɪᴏɴs:** {collections}
+🔑 **Tᴏᴛᴀʟ DB Kᴇʏs:** {objects}
+🔍 **Tᴏᴛᴀʟ Bᴏᴛ Qᴜᴇʀɪᴇs:** `{total_queries} `
     """
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:

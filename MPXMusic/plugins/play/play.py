@@ -514,20 +514,20 @@ async def play_commnd(
                 return await play_logs(message, streamtype=f"URL Searched Inline")
 
 
-__MODULE__ = "Play"
+__MODULE__ = "Pʟᴀʏ"
 __HELP__ = """
-<b>★ play, vplay, cplay</b> - Comandos Disponíveis
-<b>★ playforce, vplayforce, cplayforce</b> - Comandos de Reprodução Forçada
+<b>ᴘʟᴀʏ, ᴠᴘʟᴀʏ, ᴄᴘʟᴀʏ</b> - Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs
+<b>ᴘʟᴀʏғᴏʀᴄᴇ, ᴠᴘʟᴀʏғᴏʀᴄᴇ, ᴄᴘʟᴀʏғᴏʀᴄᴇ</b> - Fᴏʀᴄᴇ Pʟᴀʏ Cᴏᴍᴍᴀɴᴅs
 
-<b>✦ c significa reprodução em canal.</b>
-<b>✦ v significa reprodução de vídeo.</b>
-<b>✦ force significa reprodução forçada.</b>
+<b>ᴄ ᴍᴇᴀɴs ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.</b>
+<b>ᴠ ᴍᴇᴀɴs ᴠɪᴅᴇᴏ ᴘʟᴀʏ.</b>
+<b>ғᴏʀᴄᴇ ᴍᴇᴀɴs ғᴏʀᴄᴇᴅ ᴘʟᴀʏ.</b>
 
-<b>✧ /play ou /vplay ou /cplay</b> - O bot começará a reproduzir a consulta fornecida no chat de voz ou transmitirá links ao vivo nos chats de voz.
+<b>/play ᴏʀ /vplay ᴏʀ /cplay</b> - Tʜᴇ ʙᴏᴛ ᴡɪʟʟ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ᴛʜᴇ ǫᴜᴇʀʏ ᴘʀᴏᴠɪᴅᴇᴅ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏʀ sᴛʀᴇᴀᴍ ʟɪᴠᴇ ʟɪɴᴋs ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs.
 
-<b>✧ /playforce ou /vplayforce ou /cplayforce</b> - A Reprodução Forçada interrompe a faixa atual no chat de voz e começa a tocar a faixa pesquisada instantaneamente sem alterar/limpar a fila.
+<b>/playforce ᴏʀ /vplayforce ou /cplayforce</b> - Fᴏʀᴄᴇ Pʟᴀʏ sᴛᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴛʀᴀᴄᴋ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀɴᴅ sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴛʜᴇ ǫᴜᴇʀɪᴇᴅ ᴛʀᴀᴄᴋ ɪɴsᴛᴀɴᴛʟʏ ᴡɪᴛʜᴏᴜᴛ ᴄʜᴀɴɢɪɴɢ/ᴄʟᴇᴀʀɪɴɢ ᴛʜᴇ ǫᴜᴇᴜᴇ.
 
-<b>✧ /channelplay [Nome de usuário ou ID do chat] ou [Desativar]</b> - Conecte um canal a um grupo e transmita música no chat de voz do canal a partir do seu grupo.
+<b>/channelplay [Nome de usuário ou ID do chat] ou [Desativar]</b> - Cᴏɴɴᴇᴄᴛ ᴀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴛʀᴇᴀᴍ ᴍᴜsɪᴄ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
 
-<b>✧ /stream [url] </b> - Transmita uma URL que você acredita ser direta ou m3u8 e que não pode ser reproduzida pelo comando /play.
+<b>/stream [url] </b> - Sᴛʀᴇᴀᴍ ᴀ URL ᴛʜᴀᴛ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ɪs ᴅɪʀᴇᴄᴛ ᴏʀ ᴍ𝟹ᴜ𝟾 ᴀɴᴅ ᴄᴀɴɴᴏᴛ ʙᴇ ᴘʟᴀʏᴇᴅ ʙʏ ᴛʜᴇ /play ᴄᴏᴍᴍᴀɴᴅ.
 """
