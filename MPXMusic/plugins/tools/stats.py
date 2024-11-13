@@ -207,7 +207,7 @@ async def top_users_ten(_client: Client, callback_query: CallbackQuery, _):
             except:
                 continue
             limit += 1
-            msg += f"🔗`{extract}` Tocou {count} vezes no bot.\n\n"
+            msg += f"🔗`{extract}` Tᴀᴘᴘᴇᴅ {count} ᴛɪᴍᴇs ᴏɴ ᴛʜᴇ ʙᴏᴛ.\n\n"
         temp = (
             _["gstats_5"].format(limit, app.mention)
             if what == "Chats"
