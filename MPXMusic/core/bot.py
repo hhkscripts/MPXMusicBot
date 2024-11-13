@@ -114,7 +114,7 @@ class MPXBot(Client):
                     commands=[
                         BotCommand("start", "Iniciar o bot"),
                         BotCommand("help", "Abrir o menu de ajuda"),
-                        BotCommand("ping", "Verificar se o bot está ativo ou inativo"),
+                        BotCommand("ping", "Cʜᴇᴄᴋ ɪғ ᴛʜᴇ ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ ᴏʀ ɪɴᴀᴄᴛɪᴠᴇ"),
                     ],
                     scope=BotCommandScopeAllPrivateChats(),
                 )

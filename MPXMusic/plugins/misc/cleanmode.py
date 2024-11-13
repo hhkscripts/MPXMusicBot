@@ -284,18 +284,17 @@ asyncio.create_task(auto_clean())
 
 __MODULE__ = "G cast"
 __HELP__ = f"""
-<b>{command("BROADCAST_COMMAND")} [Mensagem ou Responder a qualquer mensagem]</b> » Transmite uma mensagem para os chats atendidos pelo bot.
-<u>Modos de Transmissão:</u>
+<b>{command("BROADCAST_COMMAND")} [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]</b> » ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
 
-<b><code>-pin</code></b> » Fixa sua mensagem transmitida nos chats atendidos.
+<b><code>-pin</code></b> » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
 
-<b><code>-pinloud</code></b> » Fixa sua mensagem transmitida nos chats atendidos e envia uma notificação para os membros.
+<b><code>-pinloud</code></b> » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴇᴍʙᴇʀs.
 
-<b><code>-user</code></b> » Transmite a mensagem para quem iniciou o seu bot [Você também pode fixar a mensagem usando `-pin` ou `-pinloud`].
+<b><code>-user</code></b> » ʙʀᴏᴀᴅᴄᴀsᴛs ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴜsᴇʀs ᴡʜᴏ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.
 
-<b><code>-assistant</code></b> » Transmite sua mensagem através de todos os Assistentes do bot.
+<b><code>-assistant</code></b> » ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴀssɪᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
 
-<b><code>-nobot</code></b> » Força o **bot** a não transmitir a mensagem [Útil quando você não deseja transmitir a mensagem para grupos].
+<b><code>-nobot</code></b> » ғᴏʀᴄᴇs ᴛʜᴇ **ʙᴏᴛ** ᴛᴏ ɴᴏᴛ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇ..
 
-> <b>Exemplo:</b> <code>/broadcast -user -assistant -pin Testando transmissão</code>
+> <b>ᴇxᴀᴍᴩʟᴇ:</b> <code>/broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ</code>
 """

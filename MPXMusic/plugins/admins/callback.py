@@ -723,8 +723,8 @@ __MODULE__ = "Admin"
 __HELP__ = f"""
 <b>c significa reprodução em canal</b>
 
-<b>✧ {command("PAUSE_COMMAND")}</b> - Pausar a música que está tocando.
-<b>✧ {command("RESUME_COMMAND")}</b> - Retomar a música pausada.
+<b>✧ {command("PAUSE_COMMAND")}</b> - ᴩᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
+<b>✧ {command("RESUME_COMMAND")}</b> - ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ.
 <b>✧ {command("MUTE_COMMAND")}</b> - Silenciar a música que está tocando.
 <b>✧ {command("UNMUTE_COMMAND")}</b> - Desmutar a música silenciada.
 <b>✧ {command("SKIP_COMMAND")}</b> - Pular a música que está tocando.

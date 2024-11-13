@@ -84,16 +84,16 @@ async def ping_com(_client: Client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️ Duração:** Duração desconhecida\n\nClique no botão abaixo para ver a lista completa na fila"
+        "**⌛️ Dᴜʀᴀᴛɪᴏɴ:** Uɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ\n\nCʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ғᴜʟʟ ʟɪsᴛ ɪɴ ᴛʜᴇ ǫᴜᴇᴜᴇ"
         if DUR == "Unknown"
-        else "\nClique no botão abaixo para ver a lista completa na fila."
+        else "\nCʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ғᴜʟʟ ʟɪsᴛ ɪɴ ᴛʜᴇ ǫᴜᴇᴜᴇ"
     )
     cap = f"""**{app.mention} Player**
 
-🎥**Tocando agora:** {title}
+🎥**Nᴏᴡ ᴘʟᴀʏɪɴɢ:** {title}
 
-🔗**Tipo de Transmissão:** {type}
-🙍‍♂️**Reproduzido por:** {user}
+🔗**Tʀᴀɴsᴍɪssɪᴏɴ Tʏᴘᴇ:** {type}
+🙍‍♂️**Rᴇᴘʀᴏᴅᴜᴄᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)

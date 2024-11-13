@@ -27,7 +27,7 @@ async def _clear_(chat_id):
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
 async def activevc(_, message: Message):
     mystic = await message.reply_text(
-        "🎙️ Buscando chats de voz ativos....\nPor favor, aguarde"
+        "🎙️ Sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs.... \nPʟᴇᴀsᴇ ᴡᴀɪᴛ"
     )
     served_chats = await get_active_chats()
     text = ""
@@ -45,10 +45,10 @@ async def activevc(_, message: Message):
             await _clear_(x)
             continue
     if not text:
-        await mystic.edit_text("🔍 Nenhum chat ativo encontrado")
+        await mystic.edit_text("🔍 Nᴏ ᴀᴄᴛɪᴠᴇ ᴄʜᴀᴛ ғᴏᴜɴᴅ")
     else:
         await mystic.edit_text(
-            f"**Chats de Vídeo Ativos:-**\n\n{text}",
+            f"**Aᴄᴛɪᴠᴇ Vɪᴅᴇᴏ Cʜᴀᴛs:-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
@@ -56,7 +56,7 @@ async def activevc(_, message: Message):
 @app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & SUDOERS)
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
-        "🎙️ Buscando chats de voz ativos....\nPor favor, aguarde"
+        "🎙️ Sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs.... \nPʟᴇᴀsᴇ ᴡᴀɪᴛ"        
     )
     served_chats = await get_active_video_chats()
     text = ""
@@ -74,10 +74,10 @@ async def activevi_(_, message: Message):
             await _clear_(x)
             continue
     if not text:
-        await mystic.edit_text("🔍 Nenhum chat ativo encontrado")
+        await mystic.edit_text("🔍 Nᴏ ᴀᴄᴛɪᴠᴇ ᴄʜᴀᴛ ғᴏᴜɴᴅ")
     else:
         await mystic.edit_text(
-            f"**Chats de Vídeo Ativos:-**\n\n{text}",
+            f"**Aᴄᴛɪᴠᴇ Vɪᴅᴇᴏ Cʜᴀᴛs:-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
@@ -85,16 +85,16 @@ async def activevi_(_, message: Message):
 @app.on_message(filters.command(AC_COMMAND) & SUDOERS)
 async def vc(client, message: Message):
     ac_audio = str(len(await get_active_chats()))
-    await message.reply_text(f"<b>Chats Ativos</b>: {ac_audio}")
+    await message.reply_text(f"<b>Aᴄᴛɪᴠᴇ Cʜᴀᴛs</b>: {ac_audio}")
 
 
-__MODULE__ = "Ativo"
+__MODULE__ = "Aᴄᴛɪᴠᴇ"
 __HELP__ = f"""
-<b>✧ {command("AC_COMMAND")}</b> - Verificar os chats de voz ativos no bot.
+<b>{command("AC_COMMAND")}</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ɪɴ ᴛʜᴇ ʙᴏᴛ.
 
-<b>✧ {command("ACTIVEVC_COMMAND")}</b> - Verificar as chamadas de voz e vídeo ativas no bot.
+<b>{command("ACTIVEVC_COMMAND")}</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ɪɴ ᴛʜᴇ ʙᴏᴛ.
 
-<b>✧ {command("ACTIVEVIDEO_COMMAND")}</b> - Verificar as chamadas de vídeo ativas no bot.
+<b>{command("ACTIVEVIDEO_COMMAND")}</b> - Cʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ɪɴ ᴛʜᴇ ʙᴏᴛ.
 
-<b>✧ {command("STATS_COMMAND")}</b> - Verificar as estatísticas do bot.
+<b>{command("STATS_COMMAND")}</b> - Cʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs.
 """

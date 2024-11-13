@@ -142,11 +142,11 @@ async def authusers(_client: Client, message: Message, _):
 
 __MODULE__ = "Autorização"
 __HELP__ = f"""
-<b>Usuários autorizados podem usar comandos de administrador sem direitos de administrador no seu chat.</b>
+<b>Aᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.</b>
 
-<b>✧ {command("AUTH_COMMAND")}</b> [Nome de usuário] - Adicionar um usuário à LISTA DE AUTORIZADOS do grupo.
+<b>{command("AUTH_COMMAND")} [ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ]</b> ᴀᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ ᴀᴜᴛʜ ʟɪsᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
 
-<b>✧ {command("UNAUTH_COMMAND")}</b> [Nome de usuário] - Remover um usuário da LISTA DE AUTORIZADOS do grupo.
+<b>{command("UNAUTH_COMMAND")} [ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ]</b> ʀᴇᴍᴏᴠᴇ ᴀ ᴀᴜᴛʜ ᴜsᴇʀs ғʀᴏᴍ ᴛʜᴇ ᴀᴜᴛʜ ᴜsᴇʀs ʟɪsᴛ.
 
-<b>✧ {command("AUTHUSERS_COMMAND")}</b> - Verificar a LISTA DE AUTORIZADOS do grupo.
+<b>{command("AUTHUSERS_COMMAND")}</b> - sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴜᴛʜ ᴜsᴇʀs ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ.
 """

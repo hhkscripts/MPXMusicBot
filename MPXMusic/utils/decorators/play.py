@@ -172,7 +172,7 @@ def play_wrapper(command: callable):
             is_call_active = (await app.get_chat(chat_id)).is_call_active
             if not is_call_active:
                 return await message.reply_text(
-                    "**Nenhum chat de vídeo ativo encontrado**\n\nPor favor, certifique-se de que você iniciou o chat de voz."
+                    "**Nᴏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ғᴏᴜɴᴅ**\n\nPʟᴇᴀsᴇ ᴍᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ."
                 )
         except Exception:
             pass
