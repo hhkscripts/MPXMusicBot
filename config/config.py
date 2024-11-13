@@ -17,28 +17,18 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "5")
-)  # Remember to give value in Seconds
+CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "5"))  # Remember to give value in Seconds
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 
-DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "300")
-)  # Remember to give value in Minutes
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "300"))  # Remember to give value in Minutes
 
-EXTRA_PLUGINS = getenv(
-    "EXTRA_PLUGINS",
-    "False",
-)
+EXTRA_PLUGINS = getenv("EXTRA_PLUGINS", "False",)
 
 # Fill True if you want to load extra plugins
 
 
-EXTRA_PLUGINS_REPO = getenv(
-    "EXTRA_PLUGINS_REPO",
-    "https://github.com/gabrielmaialva33/MPX-extra-plugin",
-)
+EXTRA_PLUGINS_REPO = getenv("EXTRA_PLUGINS_REPO", "https://github.com/gabrielmaialva33/MPX-extra-plugin",)
 # Fill here the external plugins repo where plugins that you want to load
 
 
@@ -48,24 +38,18 @@ EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
-SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "90")
-)  # Remember to give value in Minutes
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "90"))  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 # Your User ID.
-OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1307574219").split())
+OWNER_ID = list(map(int, getenv("OWNER_ID", "100285683").split())
 )  # Input type must be interger
 
 # make your bots privacy from telegra.ph and put your url here
 
-PRIVACY_LINK = getenv(
-    "PRIVACY_LINK",
-    "https://telegra.ph/Pol%C3%ADtica-de-Privacidade-para-MPXMusic-10-24",
-)
+PRIVACY_LINK = getenv("PRIVACY_LINK", "https://telegra.ph/Privacy-Policy-for-MPXMusic-10-19",)
 
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
@@ -74,33 +58,21 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 # For customized or modified Repository
-UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO",
-    "https://github.com/gabrielmaialva33/MPX-music-bot",
-)
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/hhkscripts/MPXMusicBot",)
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 # GIT TOKEN ( if your edited repo is private)
-GIT_TOKEN = getenv(
-    "GIT_TOKEN",
-    "",
-)
+GIT_TOKEN = getenv("GIT_TOKEN", "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",)
 
 # Only  Links formats are  accepted for this Var value.
-SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/canaisMPX"
-)  # Example:- https://t.me/cineMPX
-SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/+QuH3Xab1-5xiMzZh"
-)  # Example:- https://t.me/cineMPXcoments
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/mmprofessx")  # Example:- https://t.me/cineMPX
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+whiC9apdHDU2MGQ9")  # Example:- https://t.me/cineMPXcoments
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
 
 # Time after which you're assistant account will leave chats automatically.
-AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", 5800)
-)  # Remember to give value in Seconds
+AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", 5800))  # Remember to give value in Seconds
 
 # Set it true if you want your bot to be private only [You'll need to allow CHAT_ID via /authorize command then only your bot will play music in that chat.]
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", "False")
@@ -112,15 +84,11 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv(
-    "GITHUB_REPO", "https://github.com/gabrielmaialva33/MPX-music-bot"
-)
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/hhkscripts/MPXMusicPlugins")
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "530a978df3084f8b916e3f512a8c8bb1")
-SPOTIFY_CLIENT_SECRET = getenv(
-    "SPOTIFY_CLIENT_SECRET", "8a82bc47253a43beac406e0618297132"
-)
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "8a82bc47253a43beac406e0618297132")
 
 # Maximum number of video calls allowed on bot. You can later set it via /set_video_limit on telegram
 VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "999"))
@@ -133,13 +101,9 @@ PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
 
 # Telegram audio  and video file size limit
 
-TG_AUDIO_FILESIZE_LIMIT = int(
-    getenv("TG_AUDIO_FILESIZE_LIMIT", "4294967296")
-)  # Remember to give value in bytes
+TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "4294967296"))  # Remember to give value in bytes
 
-TG_VIDEO_FILESIZE_LIMIT = int(
-    getenv("TG_VIDEO_FILESIZE_LIMIT", "4294967296")
-)  # Remember to give value in bytes
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "4294967296"))  # Remember to give value in bytes
 
 # Chceckout https://www.gbmb.org/mb-to-bytes  for converting mb to bytes
 
