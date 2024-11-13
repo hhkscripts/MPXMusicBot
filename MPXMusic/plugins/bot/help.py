@@ -73,7 +73,7 @@ def paginate_modules(page_n, module_dict, chat=None, close: bool = False):
             ),
         ),
         EqInlineKeyboardButton(
-            "close" if close else "Back",
+            "close" if close else "Bᴀᴄᴋ",
             callback_data="close" if close else "settingsback_helper",
         ),
         EqInlineKeyboardButton(
@@ -90,7 +90,7 @@ def paginate_modules(page_n, module_dict, chat=None, close: bool = False):
         pairs.append(
             [
                 EqInlineKeyboardButton(
-                    "close" if close else "Back",
+                    "close" if close else "Bᴀᴄᴋ",
                     callback_data="close" if close else "settingsback_helper",
                 )
             ]
@@ -166,7 +166,7 @@ async def help_button(client: Client, query: CallbackQuery):
         language = await get_lang(query.message.chat.id)
         _ = get_string(language)
     except:
-        _ = get_string("pt")
+        _ = get_string("en")
 
     top_text = _["help_1"]
 
@@ -183,10 +183,10 @@ async def help_button(client: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="« Bᴀᴄᴋ",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="« Bᴀᴄᴋ", callback_data="close"),
                 ],
             ]
         )
@@ -208,10 +208,10 @@ async def help_button(client: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Voltar",
+                        text="« Bᴀᴄᴋ",
                         callback_data=f"help_back({prev_page_num},{int(close)})",
                     ),
-                    InlineKeyboardButton(text="🔄 Fechar", callback_data="close"),
+                    InlineKeyboardButton(text="« Bᴀᴄᴋ", callback_data="close"),
                 ],
             ]
         )

@@ -38,7 +38,7 @@ async def speedtest_function(client, message):
 🏳️ **País :** {result['client']['country']}
 
 <u>**Servidor:**</u>
-🌍 **Nome :** {result['server']['name']}
+🌍 **ɴᴀᴍᴇ :** {result['server']['name']}
 🇦🇺 **País:** {result['server']['country']}, {result['server']['cc']}
 💼 **Patrocinador:** {result['server']['sponsor']}
 ⚡ **Latência:** {result['server']['latency']} ms  

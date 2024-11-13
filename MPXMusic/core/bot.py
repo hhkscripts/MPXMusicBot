@@ -84,7 +84,7 @@ class MPXBot(Client):
             if chat_id:
                 await self.send_message(
                     chat_id,
-                    "I don't have the right to send photos in this chat, leaving now..",
+                    "I ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ sᴇɴᴅ ᴘʜᴏᴛᴏs ɪɴ ᴛʜɪs ᴄʜᴀᴛ, ʟᴇᴀᴠɪɴɢ ɴᴏᴡ..",
                 )
                 await self.leave_chat(chat_id)
 
@@ -100,11 +100,11 @@ class MPXBot(Client):
         try:
             await self.send_message(
                 config.LOG_GROUP_ID,
-                text=f"🚀 <u><b>{self.mention} Bot Iniciado :</b></u>\n\n🆔 <b>ID</b>: <code>{self.id}</code>\n📛 <b>Nome</b>: {self.name}\n🔗 <b>Nome de usuário:</b> @{self.username}",
+                text=f"🚀 <b>{self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ:</b>\n\n🆔 <b>ɪᴅ</b>: <code>{self.id}</code>\n📛 <b>ɴᴀᴍᴇ</b>: {self.name}\n🔗 <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{self.username}",
             )
         except:
             LOGGER(__name__).error(
-                "Bot has failed to access the log group. Make sure that you have added your bot to your log channel and promoted as admin!"
+                "Bᴏᴛ ʜᴀs ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴄᴄᴇss ᴛʜᴇ ʟᴏɢ ɢʀᴏᴜᴘ. Mᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ ʏᴏᴜʀ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇᴅ ᴀs ᴀᴅᴍɪɴ!"
             )
             LOGGER(__name__).error("An error occurred", exc_info=True)
             # sys.exit()
@@ -166,6 +166,6 @@ class MPXBot(Client):
         LOGGER(__name__).info("Bot is shutting down")
         await self.send_message(
             config.LOG_GROUP_ID,
-            text=f"🛑 <u><b>{self.mention} Bot Desligado :</b></u>\n\n🆔 <b>ID</b>: <code>{self.id}</code>\n📛 <b>Nome</b>: {self.name}\n🔗 <b>Nome de usuário:</b> @{self.username}",
+            text=f"🛑 <b>{self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ:</b>\n\n🆔 <b>ɪᴅ</b>: <code>{self.id}</code>\n📛 <b>ɴᴀᴍᴇ</b>: {self.name}\n🔗 <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{self.username}",
         )
         await super().stop()
