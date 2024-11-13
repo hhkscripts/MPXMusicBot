@@ -143,71 +143,31 @@ autoclean = []
 
 # Images
 
-START_IMG_URL = getenv(
-    "START_IMG_URL",
-    "https://graph.org/file/eaa3a2602e43844a488a5.jpg",
-    # This is the file id of the photo you can also put the url of photo
-)
+START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/eaa3a2602e43844a488a5.jpg",)
 
-PING_IMG_URL = getenv(
-    "PING_IMG_URL",
-    "https://i.imgur.com/R7jX1VS.jpeg",
-)
+PING_IMG_URL = getenv("PING_IMG_URL", "https://i.imgur.com/R7jX1VS.jpeg",)
 
-PLAYLIST_IMG_URL = getenv(
-    "PLAYLIST_IMG_URL",
-    "https://i.imgur.com/ZCiPnEg.jpeg",
-)
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://i.imgur.com/ZCiPnEg.jpeg",)
 
-GLOBAL_IMG_URL = getenv(
-    "GLOBAL_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/global_stats_img.png",
-)
+GLOBAL_IMG_URL = getenv("GLOBAL_IMG_URL", "https://i.imgur.com/887pRdW.jpeg",)
 
-STATS_IMG_URL = getenv(
-    "STATS_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/stats_img.png",
-)
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://i.imgur.com/JZO8ufy.jpeg",)
 
-TELEGRAM_AUDIO_URL = getenv(
-    "TELEGRAM_AUDIO_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/telegram_audio_img.png",
-)
+TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://i.imgur.com/01CTsHe.jpeg",)
 
-TELEGRAM_VIDEO_URL = getenv(
-    "TELEGRAM_VIDEO_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/telegram_video_img.png",
-)
+TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://i.imgur.com/Mug0jbC.jpeg",)
 
-STREAM_IMG_URL = getenv(
-    "STREAM_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/stream_img.png",
-)
+STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://i.imgur.com/jdgD7Gs.jpeg",)
 
-SOUNCLOUD_IMG_URL = getenv(
-    "SOUNCLOUD_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/soundcloud_img.png",
-)
+SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://i.imgur.com/hYUzIHQ.jpeg",)
 
-YOUTUBE_IMG_URL = getenv(
-    "YOUTUBE_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/youtube_img.png",
-)
+YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://i.imgur.com/ZRW7eMw.jpeg",)
 
-SPOTIFY_ARTIST_IMG_URL = getenv(
-    "SPOTIFY_ARTIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/spotify_artist_img.png",
-)
+SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://i.imgur.com/MtB45ds.jpeg",)
 
-SPOTIFY_ALBUM_IMG_URL = getenv(
-    "SPOTIFY_ALBUM_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/spotify_album_img.png",
-)
+SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://i.imgur.com/NfqCaGj.jpeg",)
 
-SPOTIFY_PLAYLIST_IMG_URL = getenv(
-    "SPOTIFY_PLAYLIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/spotify_playlist_img.png",
-)
+SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://i.imgur.com/xIF03Do.jpeg",)
 
 
 def time_to_seconds(time):
