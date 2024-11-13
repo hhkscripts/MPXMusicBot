@@ -151,12 +151,12 @@ START_IMG_URL = getenv(
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/ping_img.png",
+    "https://i.imgur.com/R7jX1VS.jpeg",
 )
 
 PLAYLIST_IMG_URL = getenv(
     "PLAYLIST_IMG_URL",
-    "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/playlist_img.png",
+    "https://i.imgur.com/ZCiPnEg.jpeg",
 )
 
 GLOBAL_IMG_URL = getenv(
