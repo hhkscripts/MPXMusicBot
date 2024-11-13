@@ -146,7 +146,6 @@ autoclean = []
 START_IMG_URL = getenv(
     "START_IMG_URL",
     "https://graph.org/file/eaa3a2602e43844a488a5.jpg",
-    "https://graph.org/file/b129e98b6e5c4db81c15f.jpg",
     # This is the file id of the photo you can also put the url of photo
 )
 
