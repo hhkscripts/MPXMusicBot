@@ -3,9 +3,9 @@ import random
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import db
-from WinxMusic.utils.decorators import admin_rights_check
+from MPXMusic import app
+from MPXMusic.misc import db
+from MPXMusic.utils.decorators import admin_rights_check
 from config import BANNED_USERS, PREFIXES
 from strings import get_command
 

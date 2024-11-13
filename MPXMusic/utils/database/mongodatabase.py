@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from WinxMusic.core.mongo import mongodb
+from MPXMusic.core.mongo import mongodb
 
 queriesdb = mongodb.queries
 userdb = mongodb.userstats

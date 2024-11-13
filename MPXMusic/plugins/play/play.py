@@ -5,23 +5,23 @@ from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from WinxMusic import (
+from MPXMusic import (
     LOGGER,
     app, Platform,
 )
-from WinxMusic.utils import seconds_to_min, time_to_seconds
-from WinxMusic.utils.database import is_video_allowed
-from WinxMusic.utils.decorators.play import play_wrapper
-from WinxMusic.utils.formatters import formats
-from WinxMusic.utils.inline.play import (
+from MPXMusic.utils import seconds_to_min, time_to_seconds
+from MPXMusic.utils.database import is_video_allowed
+from MPXMusic.utils.decorators.play import play_wrapper
+from MPXMusic.utils.formatters import formats
+from MPXMusic.utils.inline.play import (
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from WinxMusic.utils.inline.playlist import botplaylist_markup
-from WinxMusic.utils.logger import play_logs
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic.utils.inline.playlist import botplaylist_markup
+from MPXMusic.utils.logger import play_logs
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 from strings import get_command
 

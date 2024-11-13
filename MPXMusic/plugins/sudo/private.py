@@ -2,15 +2,15 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 import config
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import (
     add_private_chat,
     get_private_served_chats,
     is_served_private_chat,
     remove_private_chat,
 )
-from WinxMusic.utils.decorators.language import language
+from MPXMusic.utils.decorators.language import language
 from strings import get_command
 
 AUTHORIZE_COMMAND = get_command("AUTHORIZE_COMMAND")

@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import add_sudo, remove_sudo
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import add_sudo, remove_sudo
+from MPXMusic.utils.decorators.language import language
 from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
 from strings import get_command
 
@@ -18,7 +18,7 @@ SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
 async def useradd(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados Winx.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
+            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados MPX.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -56,7 +56,7 @@ async def useradd(client, message: Message, _):
 async def userdel(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados Winx.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
+            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados MPX.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:

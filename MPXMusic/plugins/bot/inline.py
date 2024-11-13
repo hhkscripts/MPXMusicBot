@@ -7,8 +7,8 @@ from pyrogram.types import (
 )
 from youtubesearchpython.__future__ import VideosSearch
 
-from WinxMusic import app
-from WinxMusic.utils.inlinequery import answer
+from MPXMusic import app
+from MPXMusic.utils.inlinequery import answer
 from config import BANNED_USERS
 
 

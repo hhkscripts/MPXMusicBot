@@ -10,8 +10,8 @@ from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
 from strings import get_command
 
 

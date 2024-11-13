@@ -2,10 +2,10 @@ from pyrogram import filters, Client
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import get_authuser_names
-from WinxMusic.utils.decorators import language
-from WinxMusic.utils.formatters import alpha_to_int
+from MPXMusic import app
+from MPXMusic.utils.database import get_authuser_names
+from MPXMusic.utils.decorators import language
+from MPXMusic.utils.formatters import alpha_to_int
 from config import BANNED_USERS, adminlist
 from strings import get_command
 

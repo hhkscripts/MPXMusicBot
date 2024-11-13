@@ -2,7 +2,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from WinxMusic import app
+from MPXMusic import app
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 
 

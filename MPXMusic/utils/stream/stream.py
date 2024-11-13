@@ -5,20 +5,20 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from WinxMusic import app, Platform
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import db
-from WinxMusic.utils.database import (
+from MPXMusic import app, Platform
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import db
+from MPXMusic.utils.database import (
     add_active_video_chat,
     is_active_chat,
     is_video_allowed,
 )
-from WinxMusic.utils.exceptions import AssistantErr
-from WinxMusic.utils.inline.play import stream_markup, telegram_markup
-from WinxMusic.utils.inline.playlist import close_markup
-from WinxMusic.utils.pastebin import winxbin
-from WinxMusic.utils.stream.queue import put_queue, put_queue_index
-from WinxMusic.utils.thumbnails import gen_qthumb, gen_thumb
+from MPXMusic.utils.exceptions import AssistantErr
+from MPXMusic.utils.inline.play import stream_markup, telegram_markup
+from MPXMusic.utils.inline.playlist import close_markup
+from MPXMusic.utils.pastebin import MPXbin
+from MPXMusic.utils.stream.queue import put_queue, put_queue_index
+from MPXMusic.utils.thumbnails import gen_qthumb, gen_thumb
 
 
 async def stream(
@@ -40,7 +40,7 @@ async def stream(
         if not await is_video_allowed(chat_id):
             raise AssistantErr(_["play_7"])
     if forceplay:
-        await Winx.force_stop_stream(chat_id)
+        await MPX.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['playlist_16']}\n\n"
         count = 0
@@ -87,7 +87,7 @@ async def stream(
                     )
                 except:
                     raise AssistantErr(_["play_16"])
-                await Winx.join_call(
+                await MPX.join_call(
                     chat_id, original_chat_id, file_path, video=status, image=thumbnail
                 )
                 await put_queue(
@@ -120,7 +120,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await winxbin(msg)
+            link = await MPXbin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -172,7 +172,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Winx.join_call(
+            await MPX.join_call(
                 chat_id, original_chat_id, file_path, video=status, image=thumbnail
             )
             await put_queue(
@@ -239,7 +239,7 @@ async def stream(
             else:
                 if not forceplay:
                     db[chat_id] = []
-                await Winx.join_call(chat_id, original_chat_id, file_path, video=None)
+                await MPX.join_call(chat_id, original_chat_id, file_path, video=None)
                 await put_queue(
                     chat_id,
                     original_chat_id,
@@ -298,7 +298,7 @@ async def stream(
 
                     if not forceplay:
                         db[chat_id] = []
-                    await Winx.join_call(
+                    await MPX.join_call(
                         chat_id, original_chat_id, file_path, video=None
                     )
                     await put_queue(
@@ -328,7 +328,7 @@ async def stream(
             if count == 0:
                 return
             else:
-                link = await winxbin(msg)
+                link = await MPXbin(msg)
                 lines = msg.count("\n")
                 if lines >= 17:
                     car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -366,7 +366,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Winx.join_call(chat_id, original_chat_id, file_path, video=None)
+            await MPX.join_call(chat_id, original_chat_id, file_path, video=None)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -416,7 +416,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Winx.join_call(chat_id, original_chat_id, file_path, video=status)
+            await MPX.join_call(chat_id, original_chat_id, file_path, video=status)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -470,7 +470,7 @@ async def stream(
             n, file_path = await Platform.youtube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await Winx.join_call(
+            await MPX.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -526,7 +526,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Winx.join_call(
+            await MPX.join_call(
                 chat_id,
                 original_chat_id,
                 link,
@@ -579,7 +579,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Winx.join_call(chat_id, original_chat_id, file_path, video=status)
+            await MPX.join_call(chat_id, original_chat_id, file_path, video=status)
             await put_queue(
                 chat_id,
                 original_chat_id,

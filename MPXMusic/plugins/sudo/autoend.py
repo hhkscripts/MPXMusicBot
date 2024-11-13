@@ -1,8 +1,8 @@
 from pyrogram import filters
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import autoend_off, autoend_on
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import autoend_off, autoend_on
 from strings import get_command
 
 AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")

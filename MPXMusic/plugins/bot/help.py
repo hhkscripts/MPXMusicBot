@@ -10,10 +10,10 @@ from pyrogram.types import (
     CallbackQuery,
 )
 
-from WinxMusic import HELPABLE, app
-from WinxMusic.utils.database import get_lang, is_commanddelete_on
-from WinxMusic.utils.decorators.language import language_start
-from WinxMusic.utils.inline.help import private_help_panel
+from MPXMusic import HELPABLE, app
+from MPXMusic.utils.database import get_lang, is_commanddelete_on
+from MPXMusic.utils.decorators.language import language_start
+from MPXMusic.utils.inline.help import private_help_panel
 from config import BANNED_USERS, START_IMG_URL, PREFIXES
 from strings import get_command, get_string
 

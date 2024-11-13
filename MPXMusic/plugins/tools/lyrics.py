@@ -9,8 +9,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from WinxMusic import app
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.utils.decorators.language import language
 
 ###Commands
 LYRICS_COMMAND = get_command("LYRICS_COMMAND")

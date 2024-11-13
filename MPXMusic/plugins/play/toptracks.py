@@ -5,21 +5,21 @@ from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, CallbackQuery
 
-from WinxMusic import app
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.utils.database import (
     get_assistant,
     get_global_tops,
     get_particulars,
     get_userss,
 )
-from WinxMusic.utils.decorators import language_cb
-from WinxMusic.utils.decorators.play import join_chat
-from WinxMusic.utils.inline.playlist import (
+from MPXMusic.utils.decorators import language_cb
+from MPXMusic.utils.decorators.play import join_chat
+from MPXMusic.utils.inline.playlist import (
     botplaylist_markup,
     failed_top_markup,
     top_play_markup,
 )
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 loop = asyncio.get_running_loop()

@@ -3,11 +3,11 @@ from pyrogram.types import Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from WinxMusic import app
-from WinxMusic.core.call import Winx
-from WinxMusic.utils.decorators.play import play_wrapper
-from WinxMusic.utils.logger import play_logs
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic import app
+from MPXMusic.core.call import MPX
+from MPXMusic.utils.decorators.play import play_wrapper
+from MPXMusic.utils.logger import play_logs
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 from strings import get_command
 
@@ -32,7 +32,7 @@ async def stream_command(
             _["play_2"].format(channel) if channel else _["play_1"]
         )
         try:
-            await Winx.stream_call(url)
+            await MPX.stream_call(url)
         except NoActiveGroupCall:
             await mystic.edit_text(
                 "Há um problema com o bot. Por favor, reporte isso ao meu dono e peça para ele verificar o grupo de logs."

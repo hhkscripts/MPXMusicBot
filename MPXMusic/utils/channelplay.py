@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 
-from WinxMusic import app
-from WinxMusic.utils.database import get_cmode
+from MPXMusic import app
+from MPXMusic.utils.database import get_cmode
 
 
 async def get_channeplay_cb(_, command: str, callback_query: CallbackQuery):

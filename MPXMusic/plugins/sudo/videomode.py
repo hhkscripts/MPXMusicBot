@@ -2,10 +2,10 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 import config
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import add_off, add_on
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import add_off, add_on
+from MPXMusic.utils.decorators.language import language
 from strings import get_command
 
 VIDEOMODE_COMMAND = get_command("VIDEOMODE_COMMAND")

@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from WinxMusic import app
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.utils.database import (
     add_nonadmin_chat,
     cleanmode_off,
     cleanmode_on,
@@ -30,9 +30,9 @@ from WinxMusic.utils.database import (
     set_playmode,
     set_playtype,
 )
-from WinxMusic.utils.decorators.admins import actual_admin_cb
-from WinxMusic.utils.decorators.language import language, language_cb
-from WinxMusic.utils.inline.settings import (
+from MPXMusic.utils.decorators.admins import actual_admin_cb
+from MPXMusic.utils.decorators.language import language, language_cb
+from MPXMusic.utils.inline.settings import (
     audio_quality_markup,
     auth_users_markup,
     cleanmode_settings_markup,
@@ -40,7 +40,7 @@ from WinxMusic.utils.inline.settings import (
     setting_markup,
     video_quality_markup,
 )
-from WinxMusic.utils.inline.start import private_panel
+from MPXMusic.utils.inline.start import private_panel
 from config import BANNED_USERS, CLEANMODE_DELETE_MINS, OWNER_ID
 from strings import get_command
 

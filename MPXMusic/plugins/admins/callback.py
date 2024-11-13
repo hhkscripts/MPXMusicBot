@@ -4,12 +4,12 @@ from pyrogram import filters, Client
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InputMediaPhoto
 
 import config
-from WinxMusic import app, Platform
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import SUDOERS, db
-from WinxMusic.utils import time_to_seconds
-from WinxMusic.utils.channelplay import get_channeplay_cb
-from WinxMusic.utils.database import (
+from MPXMusic import app, Platform
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import SUDOERS, db
+from MPXMusic.utils import time_to_seconds
+from MPXMusic.utils.channelplay import get_channeplay_cb
+from MPXMusic.utils.database import (
     is_active_chat,
     is_music_playing,
     is_muted,
@@ -20,10 +20,10 @@ from WinxMusic.utils.database import (
     mute_on,
     set_loop,
 )
-from WinxMusic.utils.decorators import actual_admin_cb
-from WinxMusic.utils.decorators.language import language_cb
-from WinxMusic.utils.formatters import seconds_to_min
-from WinxMusic.utils.inline.play import (
+from MPXMusic.utils.decorators import actual_admin_cb
+from MPXMusic.utils.decorators.language import language_cb
+from MPXMusic.utils.formatters import seconds_to_min
+from MPXMusic.utils.inline.play import (
     livestream_markup,
     panel_markup_1,
     panel_markup_2,
@@ -32,9 +32,9 @@ from WinxMusic.utils.inline.play import (
     stream_markup,
     telegram_markup,
 )
-from WinxMusic.utils.stream.autoclear import auto_clean
-from WinxMusic.utils.stream.stream import stream
-from WinxMusic.utils.thumbnails import gen_thumb
+from MPXMusic.utils.stream.autoclear import auto_clean
+from MPXMusic.utils.stream.stream import stream
+from MPXMusic.utils.thumbnails import gen_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -150,7 +150,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             return await callback_query.answer(_["admin_1"], show_alert=True)
         await callback_query.answer()
         await music_off(chat_id)
-        await Winx.pause_stream(chat_id)
+        await MPX.pause_stream(chat_id)
         await callback_query.message.reply_text(
             _["admin_2"].format(mention), disable_web_page_preview=True
         )
@@ -159,7 +159,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             return await callback_query.answer(_["admin_3"], show_alert=True)
         await callback_query.answer()
         await music_on(chat_id)
-        await Winx.resume_stream(chat_id)
+        await MPX.resume_stream(chat_id)
         await callback_query.message.reply_text(
             _["admin_4"].format(mention), disable_web_page_preview=True
         )
@@ -171,7 +171,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
         except Exception:
             pass
         await callback_query.answer()
-        await Winx.stop_stream(chat_id)
+        await MPX.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await callback_query.message.reply_text(
             _["admin_9"].format(mention), disable_web_page_preview=True
@@ -181,7 +181,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             return await callback_query.answer(_["admin_5"], show_alert=True)
         await callback_query.answer()
         await mute_on(chat_id)
-        await Winx.mute_stream(chat_id)
+        await MPX.mute_stream(chat_id)
         await callback_query.message.reply_text(
             _["admin_6"].format(mention), disable_web_page_preview=True
         )
@@ -190,7 +190,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             return await callback_query.answer(_["admin_7"], show_alert=True)
         await callback_query.answer()
         await mute_off(chat_id)
-        await Winx.unmute_stream(chat_id)
+        await MPX.unmute_stream(chat_id)
         await callback_query.message.reply_text(
             _["admin_8"].format(mention), disable_web_page_preview=True
         )
@@ -234,7 +234,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
                 try:
-                    return await Winx.stop_stream(chat_id)
+                    return await MPX.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -245,7 +245,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
                 await callback_query.message.reply_text(
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
-                return await Winx.stop_stream(chat_id)
+                return await MPX.stop_stream(chat_id)
             except:
                 return
         await callback_query.answer()
@@ -264,7 +264,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
                     _["admin_11"].format(title)
                 )
             try:
-                await Winx.skip_stream(chat_id, link, video=status)
+                await MPX.skip_stream(chat_id, link, video=status)
             except Exception:
                 return await callback_query.message.reply_text(_["call_7"])
             button = telegram_markup(_, chat_id)
@@ -294,7 +294,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             except:
                 return await mystic.edit_text(_["call_7"])
             try:
-                await Winx.skip_stream(chat_id, file_path, video=status)
+                await MPX.skip_stream(chat_id, file_path, video=status)
             except Exception:
                 return await mystic.edit_text(_["call_7"])
             button = stream_markup(_, videoid, chat_id)
@@ -315,7 +315,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await Winx.skip_stream(chat_id, videoid, video=status)
+                await MPX.skip_stream(chat_id, videoid, video=status)
             except Exception:
                 return await callback_query.message.reply_text(_["call_7"])
             button = telegram_markup(_, chat_id)
@@ -329,7 +329,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             await callback_query.edit_message_text(txt)
         else:
             try:
-                await Winx.skip_stream(chat_id, queued, video=status)
+                await MPX.skip_stream(chat_id, queued, video=status)
             except Exception:
                 return await callback_query.message.reply_text(_["call_7"])
             if videoid == "telegram":
@@ -429,7 +429,7 @@ async def main_markup_(_client: Client, callback_query: CallbackQuery, _):
             if n == 0:
                 return await mystic.edit_text(_["admin_30"])
         try:
-            await Winx.seek_stream(
+            await MPX.seek_stream(
                 chat_id,
                 file_path,
                 seconds_to_min(to_seek),
@@ -526,7 +526,7 @@ async def anonymous_check(_client: Client, callback_query: CallbackQuery):
         return
 
 
-@app.on_callback_query(filters.regex("WinxPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("MPXPlaylists") & ~BANNED_USERS)
 @language_cb
 async def play_playlists_command(_client: Client, callback_query: CallbackQuery, _):
     callback_data = callback_query.data.strip()

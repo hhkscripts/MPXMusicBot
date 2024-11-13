@@ -10,11 +10,11 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from WinxMusic import app, Platform
-from WinxMusic.core.userbot import assistants
-from WinxMusic.misc import SUDOERS, pymongodb
-from WinxMusic.plugins import ALL_MODULES
-from WinxMusic.utils.database import (
+from MPXMusic import app, Platform
+from MPXMusic.core.userbot import assistants
+from MPXMusic.misc import SUDOERS, pymongodb
+from MPXMusic.plugins import ALL_MODULES
+from MPXMusic.utils.database import (
     get_global_tops,
     get_particulars,
     get_queries,
@@ -24,8 +24,8 @@ from WinxMusic.utils.database import (
     get_top_chats,
     get_topp_users,
 )
-from WinxMusic.utils.decorators.language import language, language_cb
-from WinxMusic.utils.inline.stats import (
+from MPXMusic.utils.decorators.language import language, language_cb
+from MPXMusic.utils.inline.stats import (
     back_stats_buttons,
     back_stats_markup,
     get_stats_markup,

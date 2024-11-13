@@ -16,18 +16,18 @@ from pyrogram.enums import ChatType
 from pyrogram.types import Message
 
 import config
-from WinxMusic import app
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import HAPP, SUDOERS, XCB, db
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import HAPP, SUDOERS, XCB, db
+from MPXMusic.utils.database import (
     get_active_chats,
     get_cmode,
     remove_active_chat,
     remove_active_video_chat,
 )
-from WinxMusic.utils.decorators import admin_actual
-from WinxMusic.utils.decorators.language import language
-from WinxMusic.utils.pastebin import winxbin
+from MPXMusic.utils.decorators import admin_actual
+from MPXMusic.utils.decorators.language import language
+from MPXMusic.utils.pastebin import MPXbin
 from config import BANNED_USERS
 from strings import get_command
 
@@ -48,7 +48,7 @@ async def is_heroku():
 
 
 async def paste_neko(code: str):
-    return await winxbin(code)
+    return await MPXbin(code)
 
 
 @app.on_message(filters.command(GETLOG_COMMAND) & SUDOERS)
@@ -59,7 +59,7 @@ async def log_(client, message, _):
             if HAPP is None:
                 return await message.reply_text(_["heroku_1"])
             data = HAPP.get_log()
-            link = await winxbin(data)
+            link = await MPXbin(data)
             return await message.reply_text(link)
         else:
             if os.path.exists(config.LOG_FILE_NAME):
@@ -134,7 +134,7 @@ async def vardel_(client, message, _):
             return await message.reply_text(_["heroku_4"])
         else:
             await message.reply_text(_["heroku_7"].format(check_var))
-            os.system(f"kill -9 {os.getpid()} && python3 -m WinxMusic")
+            os.system(f"kill -9 {os.getpid()} && python3 -m MPXMusic")
 
 
 @app.on_message(filters.command(SETVAR_COMMAND) & SUDOERS)
@@ -163,7 +163,7 @@ async def set_var(client, message, _):
             await message.reply_text(_["heroku_9"].format(to_set))
         else:
             await message.reply_text(_["heroku_10"].format(to_set))
-        os.system(f"kill -9 {os.getpid()} && python3 -m WinxMusic")
+        os.system(f"kill -9 {os.getpid()} && python3 -m MPXMusic")
 
 
 @app.on_message(filters.command(USAGE_COMMAND) & SUDOERS)
@@ -257,7 +257,7 @@ async def update_(client, message, _):
     _final_updates_ = f"{_update_response_} {updates}"
 
     if len(_final_updates_) > 4096:
-        url = await winxbin(updates)
+        url = await MPXbin(updates)
         nrs = await response.edit(
             f"**A new upadte is available for the Bot!**\n\n➣ Pushing upadtes Now\n\n__**Updates:**__\n\n[Check Upadtes]({url})",
             disable_web_page_preview=True,
@@ -306,7 +306,7 @@ async def update_(client, message, _):
             )
     else:
         os.system("pip3 install --no-cache-dir -U -r requirements.txt")
-        os.system(f"kill -9 {os.getpid()} && python3 -m WinxMusic")
+        os.system(f"kill -9 {os.getpid()} && python3 -m MPXMusic")
         exit()
 
 
@@ -319,7 +319,7 @@ async def reboot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await Winx.stop_stream(message.chat.id)
+        await MPX.stop_stream(message.chat.id)
     except:
         pass
     chat_id = await get_cmode(message.chat.id)
@@ -330,7 +330,7 @@ async def reboot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await Winx.stop_stream(chat_id)
+            await MPX.stop_stream(chat_id)
         except:
             pass
     return await mystic.edit_text("Sucessfully Restarted \nTry playing Now..")
@@ -364,4 +364,4 @@ async def restart_(client, message):
     await response.edit_text(
         "Restart process started, please wait for few seconds until the bot starts..."
     )
-    os.system(f"kill -9 {os.getpid()} && python3 -m WinxMusic")
+    os.system(f"kill -9 {os.getpid()} && python3 -m MPXMusic")

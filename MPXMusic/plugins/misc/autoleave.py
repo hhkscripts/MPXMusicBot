@@ -5,9 +5,9 @@ from pyrogram import Client
 from pyrogram.enums import ChatType
 
 import config
-from WinxMusic import app
-from WinxMusic.core.call import Winx
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.core.call import MPX
+from MPXMusic.utils.database import (
     get_assistant,
     get_client,
     get_lang,
@@ -21,7 +21,7 @@ autoend = {}
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT == str(True):
-        from WinxMusic.core.userbot import assistants
+        from MPXMusic.core.userbot import assistants
 
         async def leave_inactive_chats(client: Client):
             left = 0
@@ -79,13 +79,13 @@ async def auto_end():
                         members.append(member)
                 except ValueError:
                     try:
-                        await Winx.stop_stream(chat_id)
+                        await MPX.stop_stream(chat_id)
                     except Exception:
                         pass
                     continue
                 if len(members) <= 1:
                     try:
-                        await Winx.stop_stream(chat_id)
+                        await MPX.stop_stream(chat_id)
                     except Exception:
                         pass
 

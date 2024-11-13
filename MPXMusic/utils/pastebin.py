@@ -13,7 +13,7 @@ async def post(url: str, *args: list, **kwargs: dict):
         return data
 
 
-async def winxbin(text: str | dict):
+async def MPXbin(text: str | dict):
     resp = await post(f"{BASE}api/v2/paste", data=text)
     if not resp["success"]:
         return

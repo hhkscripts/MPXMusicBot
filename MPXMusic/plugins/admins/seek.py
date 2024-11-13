@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app, Platform
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import db
-from WinxMusic.utils import admin_rights_check, seconds_to_min
+from MPXMusic import app, Platform
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import db
+from MPXMusic.utils import admin_rights_check, seconds_to_min
 from config import BANNED_USERS, PREFIXES
 from strings import get_command
 
@@ -49,7 +49,7 @@ async def seek_comm(_client: Client, message: Message, _, chat_id: int):
         if n == 0:
             return await message.reply_text(_["admin_30"])
     try:
-        await Winx.seek_stream(
+        await MPX.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),

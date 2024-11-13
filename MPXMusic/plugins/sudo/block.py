@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import add_gban_user, remove_gban_user
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import add_gban_user, remove_gban_user
+from MPXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 from strings import command, get_command
 

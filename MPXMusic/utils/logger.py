@@ -1,7 +1,7 @@
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import is_on_off
+from MPXMusic import app
+from MPXMusic.utils.database import is_on_off
 from config import LOG, LOG_GROUP_ID
 
 

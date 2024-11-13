@@ -4,9 +4,9 @@ from typing import Dict
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardButton, CallbackQuery, InlineKeyboardMarkup
 
-from WinxMusic import app, Platform, LOGGER
-from WinxMusic.utils import get_lang
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic import app, Platform, LOGGER
+from MPXMusic.utils import get_lang
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, PREFIXES
 from strings import get_command, get_string
 

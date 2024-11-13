@@ -7,19 +7,19 @@ from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from WinxMusic import app, Platform
-from WinxMusic.utils.database import (
+from MPXMusic import app, Platform
+from MPXMusic.utils.database import (
     delete_playlist,
     get_assistant,
     get_playlist,
     get_playlist_names,
     save_playlist,
 )
-from WinxMusic.utils.decorators import language, language_cb
-from WinxMusic.utils.decorators.play import botplaylist_markup, join_chat
-from WinxMusic.utils.inline.playlist import get_playlist_markup, warning_markup
-from WinxMusic.utils.pastebin import winxbin
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic.utils.decorators import language, language_cb
+from MPXMusic.utils.decorators.play import botplaylist_markup, join_chat
+from MPXMusic.utils.inline.playlist import get_playlist_markup, warning_markup
+from MPXMusic.utils.pastebin import MPXbin
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT, PREFIXES
 from strings import get_command
 
@@ -47,7 +47,7 @@ async def check_playlist(client: Client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await winxbin(msg)
+    link = await MPXbin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])

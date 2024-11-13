@@ -3,7 +3,7 @@ from pyrogram.enums import ParseMode
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 import config
-from WinxMusic import app
+from MPXMusic import app
 from config import PREFIXES
 from strings import get_command
 

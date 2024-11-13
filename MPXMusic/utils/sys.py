@@ -2,7 +2,7 @@ import time
 
 import psutil
 
-from WinxMusic.misc import _boot_
+from MPXMusic.misc import _boot_
 from .formatters import get_readable_time
 
 

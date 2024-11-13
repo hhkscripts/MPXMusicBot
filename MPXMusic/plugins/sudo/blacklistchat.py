@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from MPXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 from strings import get_command
 

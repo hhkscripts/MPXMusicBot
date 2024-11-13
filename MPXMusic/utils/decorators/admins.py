@@ -7,9 +7,9 @@ from pyrogram.types import (
     CallbackQuery,
 )
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,

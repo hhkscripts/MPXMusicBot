@@ -1,9 +1,9 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.utils.database.memorydatabase import get_loop, set_loop
-from WinxMusic.utils.decorators import admin_rights_check
+from MPXMusic import app
+from MPXMusic.utils.database.memorydatabase import get_loop, set_loop
+from MPXMusic.utils.decorators import admin_rights_check
 from config import BANNED_USERS, PREFIXES
 from strings import get_command
 

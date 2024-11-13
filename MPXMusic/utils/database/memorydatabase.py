@@ -3,7 +3,7 @@ import os
 from typing import Dict, List, Union
 
 import config
-from WinxMusic.core.mongo import mongodb
+from MPXMusic.core.mongo import mongodb
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
@@ -12,7 +12,7 @@ playmodedb = mongodb.playmode
 playtypedb = mongodb.playtypedb
 langdb = mongodb.language
 authdb = mongodb.adminauth
-videodb = mongodb.winxvideocalls
+videodb = mongodb.MPXvideocalls
 onoffdb = mongodb.onoffper
 autoenddb = mongodb.autoend
 notesdb = mongodb.notes

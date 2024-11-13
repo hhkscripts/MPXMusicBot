@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import CallbackQuery
 
-from WinxMusic import app, Platform
-from WinxMusic.utils.channelplay import get_channeplay_cb
-from WinxMusic.utils.decorators.language import language_cb
-from WinxMusic.utils.stream.stream import stream
+from MPXMusic import app, Platform
+from MPXMusic.utils.channelplay import get_channeplay_cb
+from MPXMusic.utils.decorators.language import language_cb
+from MPXMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 

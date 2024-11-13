@@ -8,8 +8,8 @@ from pyrogram.raw import types
 from pyrogram.types import Message
 
 import config
-from WinxMusic import app
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
@@ -22,8 +22,8 @@ from WinxMusic.utils.database import (
     update_particular_top,
     update_user_top,
 )
-from WinxMusic.utils.decorators.language import language
-from WinxMusic.utils.formatters import alpha_to_int
+from MPXMusic.utils.decorators.language import language
+from MPXMusic.utils.formatters import alpha_to_int
 from config import adminlist, chatstats, clean, userstats
 from strings import command, get_command
 
@@ -176,7 +176,7 @@ async def braodcast_message(_client: Client, message: Message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from WinxMusic.core.userbot import assistants
+        from MPXMusic.core.userbot import assistants
 
         for num in assistants:
             sent = 0

@@ -5,7 +5,7 @@ import subprocess
 import sys
 from os.path import abspath, dirname, isfile, join
 
-from WinxMusic import LOGGER
+from MPXMusic import LOGGER
 from config import EXTRA_PLUGINS, EXTRA_PLUGINS_FOLDER, EXTRA_PLUGINS_REPO
 
 logger = LOGGER(__name__)
@@ -85,7 +85,7 @@ def __list_all_modules():
         modules = [
             (
                 (
-                    (f.replace(main_repo_plugins_dir, "WinxMusic.plugins")).replace(
+                    (f.replace(main_repo_plugins_dir, "MPXMusic.plugins")).replace(
                         EXTERNAL_REPO_PATH, EXTRA_PLUGINS_FOLDER
                     )
                 ).replace(os.sep, ".")

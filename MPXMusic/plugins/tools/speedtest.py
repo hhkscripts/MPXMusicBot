@@ -3,8 +3,8 @@ import asyncio
 from pyrogram import filters
 
 import speedtest
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
 from strings import get_command
 
 SPEEDTEST_COMMAND = get_command("SPEEDTEST_COMMAND")

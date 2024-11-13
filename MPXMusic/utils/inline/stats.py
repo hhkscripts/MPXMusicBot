@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from WinxMusic import app
+from MPXMusic import app
 
 
 def back_stats_markup(_):

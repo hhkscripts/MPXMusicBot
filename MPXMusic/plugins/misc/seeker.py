@@ -4,17 +4,17 @@ from datetime import datetime, timedelta
 
 from pyrogram.types import InlineKeyboardMarkup
 
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import db
-from WinxMusic.utils.database import (
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import db
+from MPXMusic.utils.database import (
     get_active_chats,
     get_assistant,
     get_lang,
     is_music_playing,
     set_loop,
 )
-from WinxMusic.utils.formatters import seconds_to_min
-from WinxMusic.utils.inline import stream_markup_timer, telegram_markup_timer
+from MPXMusic.utils.formatters import seconds_to_min
+from MPXMusic.utils.inline import stream_markup_timer, telegram_markup_timer
 from strings import get_string
 from .autoleave import autoend
 from ..admins.callback import wrong
@@ -57,7 +57,7 @@ async def leave_if_muted():
                             members.append(member)
                     except ValueError:
                         try:
-                            await Winx.stop_stream(chat_id)
+                            await MPX.stop_stream(chat_id)
                         except Exception:
                             pass
                         continue
@@ -68,7 +68,7 @@ async def leave_if_muted():
                     is_muted = bool(m.is_muted and not m.can_self_unmute)
 
                     if is_muted:
-                        await Winx.stop_stream(chat_id)
+                        await MPX.stop_stream(chat_id)
                         await set_loop(chat_id, 0)
 
                     del muted[chat_id]
@@ -107,13 +107,13 @@ async def markup_timer():
                         members.append(member)
                 except ValueError:
                     try:
-                        await Winx.stop_stream(chat_id)
+                        await MPX.stop_stream(chat_id)
                     except Exception:
                         pass
                     continue
 
                 if not members:
-                    await Winx.stop_stream(chat_id)
+                    await MPX.stop_stream(chat_id)
                     await set_loop(chat_id, 0)
                     continue
 

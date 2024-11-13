@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from WinxMusic.utils.decorators import language
-from WinxMusic.utils.inline.settings import playmode_users_markup
+from MPXMusic import app
+from MPXMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from MPXMusic.utils.decorators import language
+from MPXMusic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS, PREFIXES
 from strings import get_command
 

@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.core.call import Winx
-from WinxMusic.utils import bot_sys_stats
-from WinxMusic.utils.decorators.language import language
-from WinxMusic.utils.inline import support_group_markup
+from MPXMusic import app
+from MPXMusic.core.call import MPX
+from MPXMusic.utils import bot_sys_stats
+from MPXMusic.utils.decorators.language import language
+from MPXMusic.utils.inline import support_group_markup
 from config import BANNED_USERS, PING_IMG_URL
 from strings import get_command
 
@@ -22,7 +22,7 @@ async def ping_com(_client: Client, message: Message, _):
         caption=_["ping_1"].format(app.mention),
     )
     start = datetime.now()
-    pytgping = await Winx.ping()
+    pytgping = await MPX.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(

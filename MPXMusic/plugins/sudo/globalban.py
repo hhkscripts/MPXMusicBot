@@ -5,10 +5,10 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils import get_readable_time
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils import get_readable_time
+from MPXMusic.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -16,7 +16,7 @@ from WinxMusic.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from WinxMusic.utils.decorators.language import language
+from MPXMusic.utils.decorators.language import language
 from config import BANNED_USERS
 from strings import get_command
 

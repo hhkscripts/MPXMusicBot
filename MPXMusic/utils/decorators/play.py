@@ -12,11 +12,11 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from WinxMusic import app, Platform
-from WinxMusic.core.call import Winx
-from WinxMusic.core.userbot import assistants
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import (
+from MPXMusic import app, Platform
+from MPXMusic.core.call import MPX
+from MPXMusic.core.userbot import assistants
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -28,7 +28,7 @@ from WinxMusic.utils.database import (
     is_served_private_chat,
     set_assistant,
 )
-from WinxMusic.utils.inline import botplaylist_markup
+from MPXMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE
 from config import SUPPORT_GROUP as SUPPORT_CHAT
 from config import adminlist
@@ -209,7 +209,7 @@ def play_wrapper(command: callable):
             ]
             # Checking if assistant id not in list so clear queues and remove active voice chat and process
             if not call_participants_id or userbot.id not in call_participants_id:
-                await Winx.stop_stream(chat_id)
+                await MPX.stop_stream(chat_id)
 
         else:
             userbot = await get_assistant(message.chat.id)

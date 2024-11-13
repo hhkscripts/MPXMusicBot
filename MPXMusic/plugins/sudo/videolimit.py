@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
-from WinxMusic.utils.database import set_video_limit
-from WinxMusic.utils.decorators.language import language
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
+from MPXMusic.utils.database import set_video_limit
+from MPXMusic.utils.decorators.language import language
 from strings import get_command
 
 VIDEOLIMIT_COMMAND = get_command("VIDEOLIMIT_COMMAND")

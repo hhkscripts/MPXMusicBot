@@ -6,8 +6,8 @@ from pyrogram import Client
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS
 
 
 async def member_permissions(chat_id: int, user_id: int):

@@ -7,11 +7,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from WinxMusic import HELPABLE, app, Platform
-from WinxMusic.misc import SUDOERS, _boot_
-from WinxMusic.plugins.play.playlist import del_plist_msg
-from WinxMusic.plugins.sudo.sudoers import sudoers_list
-from WinxMusic.utils.database import (
+from MPXMusic import HELPABLE, app, Platform
+from MPXMusic.misc import SUDOERS, _boot_
+from MPXMusic.plugins.play.playlist import del_plist_msg
+from MPXMusic.plugins.sudo.sudoers import sudoers_list
+from MPXMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -21,10 +21,10 @@ from WinxMusic.utils.database import (
     is_on_off,
     is_served_private_chat,
 )
-from WinxMusic.utils.decorators.language import language_start
-from WinxMusic.utils.formatters import get_readable_time
-from WinxMusic.utils.functions import MARKDOWN, WELCOMEHELP
-from WinxMusic.utils.inline import private_panel, start_pannel
+from MPXMusic.utils.decorators.language import language_start
+from MPXMusic.utils.formatters import get_readable_time
+from MPXMusic.utils.functions import MARKDOWN, WELCOMEHELP
+from MPXMusic.utils.inline import private_panel, start_pannel
 from config import BANNED_USERS, START_IMG_URL
 from config.config import OWNER_ID, PREFIXES
 from strings import command, get_command, get_string

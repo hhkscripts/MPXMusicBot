@@ -1,15 +1,15 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from WinxMusic.utils.decorators import admin_actual, language
-from WinxMusic.utils.formatters import int_to_alpha
+from MPXMusic.utils.decorators import admin_actual, language
+from MPXMusic.utils.formatters import int_to_alpha
 from config import BANNED_USERS, adminlist, PREFIXES
 from strings import command, get_command
 

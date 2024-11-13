@@ -2,9 +2,9 @@ from pyrogram import filters, Client
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import set_cmode
-from WinxMusic.utils.decorators.admins import admin_actual
+from MPXMusic import app
+from MPXMusic.utils.database import set_cmode
+from MPXMusic.utils.decorators.admins import admin_actual
 from config import BANNED_USERS
 from strings import get_command
 

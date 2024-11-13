@@ -9,8 +9,8 @@ from pymongo.errors import OperationFailure
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 
-from WinxMusic import app
-from WinxMusic.core.mongo import DB_NAME
+from MPXMusic import app
+from MPXMusic.core.mongo import DB_NAME
 from config import BANNED_USERS, MONGO_DB_URI, OWNER_ID
 
 
@@ -62,7 +62,7 @@ async def export_database(client, message):
         return
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados Winx.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
+            "**Devido a questões de privacidade, você não pode gerenciar sudoers quando está no banco de dados MPX.\n\n Por favor, preencha o seu MONGO_DB_URI nas variáveis para usar este recurso.**"
         )
     mystic = await message.reply_text("Exporting Your mongodatabase...")
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URI)
@@ -127,7 +127,7 @@ async def import_database(client, message):
         return
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            "**Due to some privacy Issue, You can't Import/Export when you are using Winx Database\n\n Please Fill Your MONGO_DB_URI in vars to use this features**"
+            "**Due to some privacy Issue, You can't Import/Export when you are using MPX Database\n\n Please Fill Your MONGO_DB_URI in vars to use this features**"
         )
 
     if not message.reply_to_message or not message.reply_to_message.document:

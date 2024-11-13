@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from WinxMusic import app
-from WinxMusic.utils.database import delete_served_chat, get_assistant, is_on_off
+from MPXMusic import app
+from MPXMusic.utils.database import delete_served_chat, get_assistant, is_on_off
 from config import LOG, LOG_GROUP_ID
 
 

@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from WinxMusic import app
+from MPXMusic import app
 from config import SUPPORT_GROUP
 
 

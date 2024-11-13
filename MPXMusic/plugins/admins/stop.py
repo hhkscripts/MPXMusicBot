@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from WinxMusic import app
-from WinxMusic.core.call import Winx
-from WinxMusic.misc import SUDOERS
-from WinxMusic.plugins import extra_plugins_enabled
-from WinxMusic.utils.database import (
+from MPXMusic import app
+from MPXMusic.core.call import MPX
+from MPXMusic.misc import SUDOERS
+from MPXMusic.plugins import extra_plugins_enabled
+from MPXMusic.utils.database import (
     delete_filter,
     get_cmode,
     get_lang,
@@ -87,6 +87,6 @@ async def stop_music(cli, message: Message):
             await check[0].get("mystic").delete()
     except Exception:
         pass
-    await Winx.stop_stream(chat_id)
+    await MPX.stop_stream(chat_id)
     await set_loop(chat_id, 0)
     await message.reply_text(_["admin_9"].format(message.from_user.mention))

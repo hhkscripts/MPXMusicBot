@@ -5,12 +5,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from WinxMusic import app
-from WinxMusic.misc import db
-from WinxMusic.utils import winxbin, get_channeplay_cb, seconds_to_min
-from WinxMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from WinxMusic.utils.decorators.language import language, language_cb
-from WinxMusic.utils.inline.queue import queue_back_markup, queue_markup
+from MPXMusic import app
+from MPXMusic.misc import db
+from MPXMusic.utils import MPXbin, get_channeplay_cb, seconds_to_min
+from MPXMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from MPXMusic.utils.decorators.language import language, language_cb
+from MPXMusic.utils.inline.queue import queue_back_markup, queue_markup
 from config import BANNED_USERS
 from strings import get_command
 
@@ -167,7 +167,7 @@ async def queued_tracks(_client: Client, callback_query: CallbackQuery, _):
     basic[videoid] = False
     buttons = queue_back_markup(_, what)
     med = InputMediaPhoto(
-        media="https://raw.githubusercontent.com/gabrielmaialva33/winx-music-bot/refs/heads/master/assets/queue_img.png",
+        media="https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/queue_img.png",
         caption=_["queue_1"],
     )
     await callback_query.edit_message_media(media=med)
@@ -188,7 +188,7 @@ async def queued_tracks(_client: Client, callback_query: CallbackQuery, _):
 
         if "🏷" in msg:
             msg = msg.replace("🏷", "")
-        link = await winxbin(msg)
+        link = await MPXbin(msg)
         await callback_query.edit_message_text(
             _["queue_3"].format(link), reply_markup=buttons
         )
@@ -196,7 +196,7 @@ async def queued_tracks(_client: Client, callback_query: CallbackQuery, _):
         if len(msg) > 700:
             if "🏷" in msg:
                 msg = msg.replace("🏷", "")
-            link = await winxbin(msg)
+            link = await MPXbin(msg)
             await asyncio.sleep(1)
             return await callback_query.edit_message_text(
                 _["queue_3"].format(link), reply_markup=buttons

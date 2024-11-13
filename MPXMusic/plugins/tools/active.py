@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.errors import ChannelInvalid
 from pyrogram.types import Message
 
-from WinxMusic import app
-from WinxMusic.misc import SUDOERS, db
-from WinxMusic.utils.database.memorydatabase import (
+from MPXMusic import app
+from MPXMusic.misc import SUDOERS, db
+from MPXMusic.utils.database.memorydatabase import (
     get_active_chats,
     get_active_video_chats,
     remove_active_chat,

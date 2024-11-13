@@ -13,11 +13,11 @@ from pyrogram.types import (
     CallbackQuery,
 )
 
-from WinxMusic import app, Platform
-from WinxMusic.platforms.Youtube import get_ytdl_options
-from WinxMusic.utils.decorators.language import language, language_cb
-from WinxMusic.utils.formatters import convert_bytes
-from WinxMusic.utils.inline.song import song_markup
+from MPXMusic import app, Platform
+from MPXMusic.platforms.Youtube import get_ytdl_options
+from MPXMusic.utils.decorators.language import language, language_cb
+from MPXMusic.utils.formatters import convert_bytes
+from MPXMusic.utils.inline.song import song_markup
 from config import BANNED_USERS, SONG_DOWNLOAD_DURATION, SONG_DOWNLOAD_DURATION_LIMIT
 from strings import get_command
 
