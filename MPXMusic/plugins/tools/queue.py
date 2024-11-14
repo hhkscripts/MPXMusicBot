@@ -167,7 +167,7 @@ async def queued_tracks(_client: Client, callback_query: CallbackQuery, _):
     basic[videoid] = False
     buttons = queue_back_markup(_, what)
     med = InputMediaPhoto(
-        media="https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/queue_img.png",
+        media="https://i.imgur.com/fJLXqx4.jpeg",
         caption=_["queue_1"],
     )
     await callback_query.edit_message_media(media=med)
