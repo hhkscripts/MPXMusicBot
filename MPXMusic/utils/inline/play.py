@@ -55,13 +55,13 @@ def stream_markup_timer(_, videoid: str, chat_id: int, played: str, dur: str):
         #         callback_data=f"PanelMarkup {videoid}|{chat_id}",
         #     ),
         # ],
-        [InlineKeyboardButton(text=_["S_B_9"], url="https://t.me/MPXStore")],
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],        
+        [InlineKeyboardButton(text=_["S_B_9"], url="https://t.me/MPXStore")],
         [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
