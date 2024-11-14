@@ -3,7 +3,7 @@ import math
 from pyrogram.types import InlineKeyboardButton
 
 from MPXMusic.utils.formatters import time_to_seconds
-from config import SUPPORT_STORE
+
 
 def get_progress_bar(percentage: float):
     umm = math.floor(percentage)
@@ -55,15 +55,13 @@ def stream_markup_timer(_, videoid: str, chat_id: int, played: str, dur: str):
         #         callback_data=f"PanelMarkup {videoid}|{chat_id}",
         #     ),
         # ],
-        [
-            [InlineKeyboardButton(text=_["S_B_9"], url=f"{SUPPORT_STORE}")]
-        ],
+        [InlineKeyboardButton(text=_["S_B_9"], url="https://t.me/MPXStore")],
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
+        ],        
         [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
