@@ -46,15 +46,15 @@ def stream_markup_timer(_, videoid: str, chat_id: int, played: str, dur: str):
                 callback_data="GetTimer",
             )
         ],
-        # [
-        #     InlineKeyboardButton(
-        #         text=_["P_B_7"], callback_data=f"add_playlist {videoid}"
-        #     ),
-        #     InlineKeyboardButton(
-        #         text=_["PL_B_3"],
-        #         callback_data=f"PanelMarkup {videoid}|{chat_id}",
-        #     ),
-        # ],
+        [
+            InlineKeyboardButton(
+                text=_["P_B_7"], callback_data=f"add_playlist {videoid}"
+            ),
+            InlineKeyboardButton(
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ),
+        ],
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
