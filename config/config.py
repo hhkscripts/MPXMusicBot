@@ -65,8 +65,9 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", "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",)
 
 # Only  Links formats are  accepted for this Var value.
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/mmprofessx")  # Example:- https://t.me/cineMPX
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+whiC9apdHDU2MGQ9")  # Example:- https://t.me/cineMPXcoments
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/mmprofessx")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+whiC9apdHDU2MGQ9")
+SUPPORT_STORE = getenv("SUPPORT_STORE", "https://t.me/MPXStore")
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
