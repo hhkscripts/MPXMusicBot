@@ -216,7 +216,7 @@ if GITHUB_REPO:
 if PING_IMG_URL:
     if (
         PING_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/ping_img.png"
+        != "https://i.imgur.com/R7jX1VS.jpeg"
     ):
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
@@ -227,7 +227,7 @@ if PING_IMG_URL:
 if PLAYLIST_IMG_URL:
     if (
         PLAYLIST_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/playlist_img.png"
+        != "https://i.imgur.com/ZCiPnEg.jpeg"
     ):
         if not re.match("(?:http|https)://", PLAYLIST_IMG_URL):
             print(
@@ -238,7 +238,7 @@ if PLAYLIST_IMG_URL:
 if GLOBAL_IMG_URL:
     if (
         GLOBAL_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/global_stats_img.png"
+        != "https://i.imgur.com/887pRdW.jpeg"
     ):
         if not re.match("(?:http|https)://", GLOBAL_IMG_URL):
             print(
@@ -249,7 +249,7 @@ if GLOBAL_IMG_URL:
 if STATS_IMG_URL:
     if (
         STATS_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/stats_img.png"
+        != "https://i.imgur.com/JZO8ufy.jpeg"
     ):
         if not re.match("(?:http|https)://", STATS_IMG_URL):
             print(
@@ -260,7 +260,7 @@ if STATS_IMG_URL:
 if TELEGRAM_AUDIO_URL:
     if (
         TELEGRAM_AUDIO_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/telegram_audio_img.png"
+        != "https://i.imgur.com/01CTsHe.jpeg"
     ):
         if not re.match("(?:http|https)://", TELEGRAM_AUDIO_URL):
             print(
@@ -271,7 +271,7 @@ if TELEGRAM_AUDIO_URL:
 if STREAM_IMG_URL:
     if (
         STREAM_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/stream_img.png"
+        != "https://i.imgur.com/jdgD7Gs.jpeg"
     ):
         if not re.match("(?:http|https)://", STREAM_IMG_URL):
             print(
@@ -282,7 +282,7 @@ if STREAM_IMG_URL:
 if SOUNCLOUD_IMG_URL:
     if (
         SOUNCLOUD_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/soundcloud_img.png"
+        != "https://i.imgur.com/hYUzIHQ.jpeg"
     ):
         if not re.match("(?:http|https)://", SOUNCLOUD_IMG_URL):
             print(
@@ -293,7 +293,7 @@ if SOUNCLOUD_IMG_URL:
 if YOUTUBE_IMG_URL:
     if (
         YOUTUBE_IMG_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/youtube_img.png"
+        != "https://i.imgur.com/ZRW7eMw.jpeg"
     ):
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
@@ -304,7 +304,7 @@ if YOUTUBE_IMG_URL:
 if TELEGRAM_VIDEO_URL:
     if (
         TELEGRAM_VIDEO_URL
-        != "https://raw.githubusercontent.com/gabrielmaialva33/MPX-music-bot/refs/heads/master/assets/telegram_video_img.png"
+        != "https://i.imgur.com/Mug0jbC.jpeg"
     ):
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
